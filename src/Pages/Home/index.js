@@ -3,6 +3,7 @@ import { SearchForm } from "./SearchForm"
 import { SearchResults } from "./SearchResults"
 import { NowPlaying } from "./NowPlaying"
 
+import './style.css';
 
 const API_KEY = '82971fc3f3d7f90dcc948b6c6fb75563';
 const actions = {
