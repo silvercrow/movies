@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Button from "../../Components/Button";
 class MovieItem extends Component {
   render() { 
     let movie = this.props.data;
@@ -18,10 +18,7 @@ class MovieItem extends Component {
               <div className="card_right__rating__stars">
               </div>
             </div>
-
-            <div className="card_right__button">
-              <a href="" target="_blank">View</a>
-            </div>
+            <Button/>
           </div>
         </div>
       </div>
