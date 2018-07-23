@@ -8,7 +8,7 @@ export class NowPlaying extends Component {
         <h2>Now Playing</h2>
         <div className="NowPlayingMovies">
           {movies.map((movie) =>
-            <MovieItem data={movie}/>
+            <MovieItem key={movie.id} data={movie}/>
           )}
         </div>
       </div>

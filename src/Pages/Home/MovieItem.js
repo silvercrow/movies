@@ -4,7 +4,7 @@ class MovieItem extends Component {
   render() { 
     let movie = this.props.data;
     return (
-      <div key={movie.id} className="card">
+      <div  className="card">
         <div className="card_left">
           <img src={'http://image.tmdb.org/t/p/w342'+movie.poster_path} alt={movie.title}/>
         </div>
