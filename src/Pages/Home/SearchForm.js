@@ -20,9 +20,11 @@ export class SearchForm extends React.Component {
   handleSearchfocus = () => {
     this.setState({searchModalFullScreen:true});
   }
+
   handleSearchBlur = ()=>{
     this.setState({searchModalFullScreen:false});
   }
+  
   handleClose = () =>{
     this.setState({searchModalFullScreen:false});
   }

@@ -174,7 +174,7 @@ body {
 .morphsearch {
 	width: 200px;
 	min-height: 40px;
-	background: #fff;
+	background:rgba(0,0,0,0.85);
 	position: absolute;
 	z-index: 10000;
 	top: 50px;
@@ -360,7 +360,6 @@ input[type="search"] { /* reset normalize */
 	height: 0;
 	overflow: hidden;
 	padding: 0 10.5%;
-	background: #f1f1f1;
 	position: absolute;
 	pointer-events: none;
 	opacity: 0;
