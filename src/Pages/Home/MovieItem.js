@@ -53,22 +53,37 @@ const StyledCardRight = styled.div`
 `;
 
 const StyledCardContent = styled.div`
-height:180px;
+height:140px;
 overflow:hidden;
 margin-bottom:5px;
+
 h2 {
   color: white;
   font-weight: bold;
   text-align: left;
   font-size: 14px;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   letter-spacing: 1px;
+  color: #ffda00;
 }
 p{
   color: white;
   font-size:10px;
   padding: 0 10px 10px 10px;
+
+     overflow: hidden;
+   text-overflow: ellipsis;
+   word-wrap: break-word;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 5; /* number of lines to show */
+   line-height: 10px;        /* fallback */
+   max-height: 50px;  
+   -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
 }
 `;
 

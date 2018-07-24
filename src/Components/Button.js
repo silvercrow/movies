@@ -15,7 +15,7 @@ float:right;
 padding: 0.25em 1em;
 background-color: #ffda00;
 text-decoration: none;
-border: 2px solid #ffda00;
+border: 2px solid #e68b05;
 font-size: 14px;
 font-weight:bold;
 border-radius: 5px;

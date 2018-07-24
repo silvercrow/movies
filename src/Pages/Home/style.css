@@ -112,7 +112,10 @@ body {
 }
 
 
+.SearchResults h2,
+.NowPlaying h2{
 
+}
 
 .morphsearch {
 	width: 200px;
