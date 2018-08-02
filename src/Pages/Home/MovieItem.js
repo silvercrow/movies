@@ -23,15 +23,13 @@ class MovieItem extends Component {
 }
 
 const StyledCard = styled.div`
-  width: 25%;
-  height: 100%;
-  background: #000000;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
-  float:left;
-  margin:2%;
+    padding: 0.9em 1em;
+    border-bottom: 1px solid #ddd;
+    border-left: 6px solid transparent;
+    display:flex;
+    &:hover {
+      background: #eee;
+    }
 `;
 
 const StyledCardLeft = styled.div`
@@ -45,11 +43,7 @@ const StyledCardLeft = styled.div`
 const StyledCardRight = styled.div`
   width: 60%;
   float: left;
-  background: #000000;
   height: auto;
-  border-radius: 0 10px 10px 0;
-  -webkit-border-radius: 0 10px 10px 0;
-  -moz-border-radius: 0 10px 10px 0;
 `;
 
 const StyledCardContent = styled.div`
@@ -58,29 +52,25 @@ overflow:hidden;
 margin-bottom:5px;
 
 h2 {
-  color: white;
   font-weight: bold;
   text-align: left;
   font-size: 14px;
   margin: 10px 0 0 0;
   padding: 0 0 0 10px;
   letter-spacing: 1px;
-  color: #ffda00;
 }
 p{
-  color: white;
-  font-size:10px;
+  font-size:14px;
   padding: 0 10px 10px 10px;
-
-     overflow: hidden;
-   text-overflow: ellipsis;
-   word-wrap: break-word;
-   display: -webkit-box;
-   -webkit-box-orient: vertical;
-   -webkit-line-clamp: 5; /* number of lines to show */
-   line-height: 10px;        /* fallback */
-   max-height: 50px;  
-   -webkit-hyphens: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  line-height: 14px;        /* fallback */
+  max-height: 72px;  
+  -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 
@@ -90,9 +80,6 @@ p{
 const StyledCardImg = styled.img`
   width: 100%;
   height: auto;
-  border-radius: 10px 0 0 10px;
-  -webkit-border-radius: 10px 0 0 10px;
-  -moz-border-radius: 10px 0 0 10px;
   position: relative;
 `;
  
