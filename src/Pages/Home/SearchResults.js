@@ -8,20 +8,26 @@ export class SearchResults extends React.Component {
     return (
       <StyledSearchResults>
         <h2>Search Results</h2>
-        <div className="NowPlayingMovies">
+        <StyledMovies>
             {movies.map((movie) =>
               <MovieItem data={movie}/>
             )}
-        </div>
-
+        </StyledMovies>
       </StyledSearchResults>
     );
   }
 }
 const StyledSearchResults = styled.div`
-width: 350px;
-height: 100%;
-border-right: 1px solid #ddd;
+  padding: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+  h2{
+  transition: width .5s ease, background-color .5s ease;
+  color: #111;
+  }
 `;
-
+  const StyledMovies = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 

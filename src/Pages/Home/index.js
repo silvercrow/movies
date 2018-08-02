@@ -2,6 +2,7 @@ import React from "react";
 import { SearchForm } from "./SearchForm"
 import { SearchResults } from "./SearchResults"
 import { NowPlaying } from "./NowPlaying"
+import styled from "styled-components";
 
 //import './style.css';
 
@@ -38,16 +39,17 @@ export class Home extends React.Component {
     this.setState({'searchResults':searchResults});
   };
 
-
   render() {
     return (
-      <div className="Home">
+      <StyledHomepage>
        <SearchForm searchAction={this.searchForMovie}/>
        <SearchResults movies={this.state.searchResults}/>
        <NowPlaying movies={this.state.nowPlaying}/>
-      </div>
+      </StyledHomepage>
     );
   }
 }
 
-
+const StyledHomepage = styled.div`
+  background: #eee;
+`;

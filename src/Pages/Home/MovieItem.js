@@ -6,83 +6,78 @@ class MovieItem extends Component {
   render() { 
     let movie = this.props.data;
     return (
-      <StyledCard>
-        <StyledCardLeft>
-          <StyledCardImg src={'http://image.tmdb.org/t/p/w342'+movie.poster_path} alt={movie.title}/>
-        </StyledCardLeft>
-        <StyledCardRight>
-          <StyledCardContent>
-            <h2>{movie.title}</h2>
+      <StyledCard background={'http://image.tmdb.org/t/p/w342'+movie.poster_path}>
+        <StyledCardInfo>
+            <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
-          </StyledCardContent>
           <Button>Show More</Button>
-        </StyledCardRight>
+        </StyledCardInfo>
       </StyledCard>
     );
   }
 }
 
 const StyledCard = styled.div`
-    padding: 0.9em 1em;
-    border-bottom: 1px solid #ddd;
-    border-left: 6px solid transparent;
-    display:flex;
-    &:hover {
-      background: #eee;
-    }
-`;
-
-const StyledCardLeft = styled.div`
-  width: 40%;
-  height: auto;
-  float: left;
+  background-image: url(${props => props.background});
+  margin: 1em;
+  width: 185px;
+  height: 270px;
+  border-radius: 9px;
   overflow: hidden;
-  background: transparent;
-`;
-
-const StyledCardRight = styled.div`
-  width: 60%;
-  float: left;
-  height: auto;
-`;
-
-const StyledCardContent = styled.div`
-height:140px;
-overflow:hidden;
-margin-bottom:5px;
-
-h2 {
-  font-weight: bold;
-  text-align: left;
-  font-size: 14px;
-  margin: 10px 0 0 0;
-  padding: 0 0 0 10px;
-  letter-spacing: 1px;
-}
-p{
-  font-size:14px;
-  padding: 0 10px 10px 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5; /* number of lines to show */
-  line-height: 14px;        /* fallback */
-  max-height: 72px;  
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-
-}
-`;
-
-const StyledCardImg = styled.img`
-  width: 100%;
-  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.4s ease all;
+  transform: none;
+  backface-visibility: hidden;
   position: relative;
+  display:flex;
 `;
- 
+
+const StyledCardInfo = styled.div`
+  opacity: 0;
+  position: relative;
+  transform: translateY(15px);
+  transition: .4s ease all;
+  padding: 0.5em;
+  text-align: center;
+  background-color: rgba(32, 35, 44, 0.8);
+  width:100%;
+
+  h3 {
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 10px;
+    letter-spacing: 1px;
+    color: #ffc423;
+    height:20%;
+    overflow:hidden;
+  }
+  p{
+    font-size:14px;
+    padding: 0 5px 5px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    line-height: 15px;        /* fallback */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    color: #ffff;
+    height:45%;
+  }
+  &:hover{
+    opacity: 1;
+    display: block;
+    transform: none;
+  }
+`;
+
 export default MovieItem;
 
 

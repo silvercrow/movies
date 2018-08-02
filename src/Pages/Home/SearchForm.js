@@ -1,4 +1,5 @@
 import React from "react";
+import styled, { css } from "styled-components";
 
 export class SearchForm extends React.Component {
   constructor(props) {
@@ -31,14 +32,14 @@ export class SearchForm extends React.Component {
 
   render() {
 
-    let fullScreenSearch = 'morphsearch';
+    let fullScreenSearch = '';
     if (this.state.searchModalFullScreen) {
-      fullScreenSearch = 'morphsearch open';
+      fullScreenSearch = 'fullScreen';
     }
 
     return (
 
-<div id="morphsearch" className={fullScreenSearch}>
+<StyledSearch fullScreenSearch>
   <form className="morphsearch-form" onSubmit={this.handleSubmit}>
     <input 
     id="search-input"
@@ -75,9 +76,33 @@ export class SearchForm extends React.Component {
     </div>
   </div>
   <span className="morphsearch-close" onClick={this.handleClose}></span>
-</div>
+</StyledSearch>
 
     );
   }
 }
 
+const StyledSearch = styled.div`
+width: 200px;
+min-height: 40px;
+background:rgba(0,0,0,0.85);
+position: absolute;
+z-index: 10000;
+top: 50px;
+right: 50px;
+-webkit-transform-origin: 100% 0;
+transform-origin: 100% 0;
+-webkit-transition-property: min-height, width, top, right;
+transition-property: min-height, width, top, right;
+-webkit-transition-duration: 0.5s;
+transition-duration: 0.5s;
+-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+${props => props.fullScreen && css`
+    background: palevioletred;
+    color: white;
+  `}
+
+
+`;
