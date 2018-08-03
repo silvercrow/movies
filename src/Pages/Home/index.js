@@ -1,6 +1,6 @@
 import React from "react";
-import { SearchForm } from "./SearchForm"
-import { SearchResults } from "./SearchResults"
+import { SearchForm } from "./Search/Form"
+import { SearchResults } from "./Search/Results"
 import { NowPlaying } from "./NowPlaying"
 import styled from "styled-components";
 

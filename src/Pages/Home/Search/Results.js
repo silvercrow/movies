@@ -1,5 +1,5 @@
 import React from "react";
-import MovieItem from "./MovieItem";
+import MovieItem from "../MovieItem";
 import styled from "styled-components";
 
 export class SearchResults extends React.Component {
